@@ -84,9 +84,12 @@
 // console.log(a)
 
 // //bai5
-
-const toSnakeCase = str => str.match(/[A-Z][a-z]{1,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g).map(x => x.toLowerCase()).join('_')
-    console.log(toSnakeCase('My..Name,,,tuan1231Anh'));
+function toSnakeCase(str){
+  return str.match(/[A-Z][a-z]{1,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g).map(x => x.toLowerCase()).join('_')
+}
+console.log(toSnakeCase('My..Name,,,tuan1231Anh'));
 // trường hợp này dùng để covert chuỗi kí tự in hoa ko theo trật tự
-const SnakeCase = str => str.toLowerCase().match(/[A-Z][a-z]{1,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g).join('_')
-    console.log(SnakeCase('SnAkE..CaSe..Is..AwEsOmE'));
+function SnakeCase(str){
+  return str.toLowerCase().match(/[A-Z][a-z]{1,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g).join('_')
+}
+console.log(SnakeCase('SnAkE..CaSe..Is..AwEsOmE'));
