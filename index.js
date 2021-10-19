@@ -1,10 +1,11 @@
 //bai1
-// const array = [1, 2, 3, 4];
-// const index = array.indexOf(3);
-// if (index > -1) {
-//   array.splice(index, 1);
-// }
-// console.log(array);
+console.log('----bai1----')
+const array = [1, 2, 3, 4];
+const index = array.indexOf(3);
+if (index > -1) {
+  array.splice(index, 1);
+}
+console.log(array);
 
 
 ///bai2
@@ -39,51 +40,54 @@
 
 
 //bai 3
-// const fibonacci = function(num){
-//   let a, b, temp
-//   a = 0
-//   b = 1
-//   temp = b
-//   for( let i=0; i<num; i++)
-//   {
-//     // fib[i] = fib[i - 2] + fib[i - 1];
-//     console.log('chuoi fibonacci:' +temp)
-//     temp = a + b
-//     a = b
-//     b = temp
-//   }
-//   return 'return '+a
-// }
-// console.log(fibonacci(4))
+console.log('----bai3----')
+const fibonacci = function(num){
+  let a, b, temp
+  a = 0
+  b = 1
+  temp = b
+  for( let i=0; i<num; i++)
+  {
+    // fib[i] = fib[i - 2] + fib[i - 1];
+    console.log('chuoi fibonacci:' +temp)
+    temp = a + b
+    a = b
+    b = temp
+  }
+  return 'return '+a
+}
+console.log(fibonacci(4))
 
 
 //bai4
-// const people = [{
-//     name: 'Carly',
-//     yearOfBirth: 1942,
-//     yearOfDeath: 1970,
-//   },
-//   {
-//     name: 'Ray',
-//     yearOfBirth: 1962,
-//     yearOfDeath: 2011
-//   },
-//   {
-//     name: 'Jane',
-//     yearOfBirth: 1912,
-//     yearOfDeath: 1941
-//   },
-// ]
-// let age = people.map((index)=> {
-//     return (index.yearOfDeath - index.yearOfBirth)
-// })
-// const a = people.filter((index)=> {
-//     return ((index.yearOfDeath - index.yearOfBirth) == Math.max(...age))
-// })
-// console.log(age)
-// console.log(a)
+console.log('----bai4----')
+const people = [{
+    name: 'Carly',
+    yearOfBirth: 1942,
+    yearOfDeath: 1970,
+  },
+  {
+    name: 'Ray',
+    yearOfBirth: 1962,
+    yearOfDeath: 2011
+  },
+  {
+    name: 'Jane',
+    yearOfBirth: 1912,
+    yearOfDeath: 1941
+  },
+]
+let age = people.map((index)=> {
+    return (index.yearOfDeath - index.yearOfBirth)
+})
+const a = people.filter((index)=> {
+    return ((index.yearOfDeath - index.yearOfBirth) == Math.max(...age))
+})
+console.log(age)
+console.log(a)
 
 // //bai5
+console.log('----bai5----')
 function toSnakeCase(str){
   return str.match(/[A-Z][a-z]{1,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g).map(x => x.toLowerCase()).join('_')
 }
