@@ -25,7 +25,7 @@
 // };
 
 // const power = function(one, two)  {
-// 	return  one / two
+// 	return  one**two
 // };
 
 // const factorial = function(one)  {
@@ -39,11 +39,6 @@
 
 
 //bai 3
-// var i;
-// var fib = [1,2,3,4,56,6]; // Initialize array!
-
-// fib[0] = 0;
-// fib[1] = 1;
 // const fibonacci = function(num){
 //   let a, b, temp
 //   a = 0
@@ -52,11 +47,12 @@
 //   for( let i=0; i<num; i++)
 //   {
 //     // fib[i] = fib[i - 2] + fib[i - 1];
-//     document.write(temp+"<br>")
+//     console.log('chuoi fibonacci:' +temp)
 //     temp = a + b
 //     a = b
 //     b = temp
 //   }
+//   return 'return '+a
 // }
 // console.log(fibonacci(4))
 
@@ -90,7 +86,7 @@
 // //bai5
 
 const toSnakeCase = str => str.match(/[A-Z][a-z]{1,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g).map(x => x.toLowerCase()).join('_')
-    console.log(toSnakeCase('SnAkE..CaSe..Is..AwEsOmE'));
-
+    console.log(toSnakeCase('My..Name,,,tuan1231Anh'));
+// trường hợp này dùng để covert chuỗi kí tự in hoa ko theo trật tự
 const SnakeCase = str => str.toLowerCase().match(/[A-Z][a-z]{1,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g).join('_')
     console.log(SnakeCase('SnAkE..CaSe..Is..AwEsOmE'));
