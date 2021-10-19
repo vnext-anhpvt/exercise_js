@@ -9,6 +9,7 @@ console.log(array);
 
 
 ///bai2
+// e test function bên này còn e giao diện trên index.html
 // const add = function(one, two) {
 // 	return one + two
 // };
