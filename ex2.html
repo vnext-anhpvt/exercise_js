@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const users = {
+            Alex: {
+                email: 'alex@alex.com',
+                skills: ['HTML', 'CSS', 'JavaScript']
+            },
+            Asab: {
+                email: 'asab@asab.com',
+                skills: [
+                    'HTML',
+                    'CSS',
+                    'JavaScript',
+                    'Redux',
+                    'MongoDB',
+                    'Express',
+                    'React',
+                    'Node'
+                ]
+            },
+            Brook: {
+                email: 'daniel@daniel.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux']
+            },
+            Daniel: {
+                email: 'daniel@alex.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'Python']
+            },
+            John: {
+                email: 'john@john.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node.js']
+            },
+            Thomas: {
+                email: 'thomas@thomas.com',
+                skills: ['HTML', 'CSS', 'JavaScript', 'React']
+
+            },
+            Paul: {
+                email: 'paul@paul.com',
+                skills: [
+                    'HTML',
+                    'CSS',
+                    'JavaScript',
+                    'MongoDB',
+                    'Express',
+                    'React',
+                    'Node'
+                ]
+            }
+        }
+        let title, span
+            title = document.createElement('h1')
+            title.textContent = 'Asabeneh yetayeh challenges in '
+            span = document.createElement("span");
+            span.textContent = '2012'
+            span.style.fontSize = '100px'
+            span.style.color = 'red'
+            title.style.textAlign = 'center'
+            document.body.appendChild(title)
+            title.appendChild(span)
+            // 
+
+            
+        for (let [userName, value] of Object.entries(users)) {
+
+            let text1, title2, details, text3, detailText, li1, div, div1, div2
+
+            div = document.createElement('div')
+            div.style.backgroundColor = 'red'
+            div.style.padding = '10px 0px 30px 10px'
+            div.style.width = '100%'
+            div.style.position = 'relative'
+            window.addEventListener('DOMContentLoaded', (e) => {
+                const hover = document.querySelectorAll('div')
+                for(let j = 0; j<hover.length; j++){
+                    hover[j].addEventListener('mousemove', (e) => {
+                        hover[j].style.backgroundColor = 'yellow'
+                    })
+                    hover[j].addEventListener('mouseout', (e) => {
+                        hover[j].style.backgroundColor = 'red'
+                    })
+                }
+            })
+
+
+            div1 = document.createElement('a')
+            div1.textContent = userName
+            div1.style.position = 'absolute'
+            div1.style.top = '10px'
+
+            div2 = document.createElement('a')
+            div2.textContent = value.email
+            div2.style.position = 'absolute'
+            div2.style.top = '10px'
+            div2.style.right = '10px'
+            // text3.style.width = '30%'
+
+            title2 = document.createElement('details')
+            title2.style.textAlign = 'center'
+
+            // text1 = document.createElement('a')
+            // text1.textContent = '30 day of python'
+            // text1.style.float = 'left'
+
+            text3 = document.createElement('summary')
+            text3.textContent = 'skills'
+            text3.style.float = 'center'
+            text3.style.width = '30%'
+            text3.style.marginLeft = '500px'
+            text3.style.position = 'absolute'
+            text3.style.top = '10px'
+            // text3.style.width = '30%'
+
+            detailText = document.createElement('ul')
+
+            for (let i = 0; i < value.skills.length; i++) {
+                li1 = document.createElement('li')
+                li1.textContent = value.skills[i];
+                li1.style.marginLeft = '-85px'
+                detailText.appendChild(li1)
+
+            }
+            detailText.style.float = 'center'
+            detailText.style.listStyleType = 'none'
+            document.body.appendChild(div)
+            div.appendChild(title2)
+            div.appendChild(div1)
+            div.appendChild(div2)
+            title2.appendChild(text3)
+            title2.appendChild(detailText)
+
+            function randomColor() {
+                var color_;
+                color_ = Math.floor(Math.random() * 16777215).toString(16);
+                span.style.color = "#" + color_;
+                return color_;
+            }
+
+
+            var c1 = setInterval(randomColor, 1000);
+            console.log(c1)
+
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html
